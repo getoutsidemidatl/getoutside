@@ -8,11 +8,23 @@
 <script>tailwind.config={theme:{fontFamily:{display:['Outfit','sans-serif'],sans:['Plus Jakarta Sans','sans-serif']}}}</script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans">
-<nav class="fixed top-0 inset-x-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-<div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-<a href="../../index.html" class="font-display font-extrabold text-white">GET OUTSIDE</a>
-<a href="../../weekends-hub.html" class="px-5 py-2.5 rounded-xl border border-amber-500 text-amber-500 font-bold text-sm">This Week</a>
-</div></nav>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="flex items-center justify-between h-20">
+<a href="../../index.html" class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center font-display font-black text-white">🏕</div>
+<div class="flex flex-col leading-none">
+<span class="font-display font-extrabold text-sm sm:text-lg text-white">GET OUTSIDE <span class="text-amber-500">MID ATLANTIC</span></span>
+<span class="text-[9px] font-semibold tracking-widest text-slate-400 uppercase">MD · VA · PA · DE · WV</span>
+</div>
+</a>
+<div class="flex items-center gap-2 sm:gap-3">
+<a href="/sports/" class="px-3 sm:px-4 py-2 rounded-xl border border-amber-500/60 text-amber-400 font-bold text-xs sm:text-sm whitespace-nowrap">Sports Operation Center (SOC)</a>
+<a href="../../weekends-hub.html" class="px-3 sm:px-4 py-2 rounded-xl border border-amber-500 text-amber-500 font-bold text-xs sm:text-sm whitespace-nowrap">This Week</a>
+</div>
+</div>
+</div>
+</nav>
 <main class="max-w-4xl mx-auto px-4 pt-32 pb-20">
 <p class="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-2">Week of 2026-08-13</p>
 <h1 class="font-display font-extrabold text-4xl sm:text-5xl mb-4">This Weekend Across the Mid-Atlantic</h1>
