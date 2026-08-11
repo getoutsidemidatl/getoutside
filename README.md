@@ -35,3 +35,5 @@ To publish a change: commit it here (via git, or GitHub's "Upload files" if you'
 - Facebook: [Get Outside Mid Atlantic](https://facebook.com/getoutsidemidatlantic)
 - YouTube: [@getoutsidemidatlantic](https://youtube.com/@getoutsidemidatlantic)
 - X: [@getoutsidematl](https://x.com/getoutsidematl)
+
+<!-- deploy-bust 2026-08-11T05:34:15Z -->
