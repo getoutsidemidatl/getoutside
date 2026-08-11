@@ -22,7 +22,7 @@ header{background:linear-gradient(90deg,#020617 0%,#0a1628 55%,#0c1a2e 100%);pad
 .time-filters button:hover{background:rgba(255,255,255,.1);color:#e8eef7}
 .time-filters button.active{background:#22c55e;border-color:#22c55e;color:#0b1220}
 #main{display:flex;height:calc(100vh - 48px)}
-#layers{width:220px;min-width:200px;background:#0a1220;border-right:1px solid #1e3a55;display:flex;flex-direction:column;flex-shrink:0;z-index:600;overflow-y:auto}
+#layers{width:220px;min-width:200px;background:#0a1220;border-right:1px solid #1e3a55;display:flex;flex-direction:column;flex-shrink:0;z-index:600;overflow-y:auto;max-height:100%}
 .layers-title{padding:12px 14px 8px;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#6b7f9a;font-weight:700}
 .layer-item{display:flex;align-items:center;gap:10px;padding:8px 14px;cursor:pointer;border:none;background:transparent;width:100%;text-align:left;color:#c5d4e8;font-size:.82rem;font-family:inherit}
 .layer-item:hover{background:rgba(255,255,255,.04)}
@@ -40,14 +40,14 @@ header{background:linear-gradient(90deg,#020617 0%,#0a1628 55%,#0c1a2e 100%);pad
 .layers-hint{padding:8px 14px 16px;font-size:.68rem;color:#5a6f88;line-height:1.4}
 #map{flex:1;height:100%;min-width:0}
 #feed{width:320px;max-width:36vw;min-width:260px;background:#0c1524;border-left:1px solid #1e3a55;display:flex;flex-direction:column;flex-shrink:0;z-index:500;position:relative}
-.intel-desk{border-bottom:1px solid #1e3a55;background:#071018;flex-shrink:0}
-.intel-head{padding:10px 14px 6px;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:#f59e0b;font-weight:700;display:flex;justify-content:space-between;align-items:center}
-.intel-updated{font-size:.62rem;color:#64748b;font-weight:600;letter-spacing:.02em;text-transform:none}
-.intel-body{padding:0 10px 10px;max-height:220px;overflow-y:auto}
-.intel-item{display:block;padding:8px 10px;margin-bottom:6px;border-radius:10px;border:1px solid #1e3a55;background:#0a1220;text-decoration:none;color:inherit;transition:border-color .15s}
+.intel-desk{margin-top:auto;border-top:1px solid #1e3a55;background:#071018;flex-shrink:0}
+.intel-head{padding:10px 12px 6px;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:#f59e0b;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.intel-updated{font-size:.58rem;color:#64748b;font-weight:600;letter-spacing:.02em;text-transform:none;white-space:nowrap}
+.intel-body{padding:0 8px 10px;max-height:28vh;overflow-y:auto}
+.intel-item{display:block;padding:6px 8px;margin-bottom:5px;border-radius:8px;border:1px solid #1e3a55;background:#0a1220;text-decoration:none;color:inherit;transition:border-color .15s}
 .intel-item:hover{border-color:#f59e0b66}
 .intel-tag{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#38bdf8;margin-bottom:3px}
-.intel-title{font-size:.78rem;font-weight:700;color:#e2e8f0;line-height:1.25;margin-bottom:2px}
+.intel-title{font-size:.72rem;font-weight:700;color:#e2e8f0;line-height:1.25;margin-bottom:2px}
 .intel-note{font-size:.68rem;color:#94a3b8;line-height:1.3}
 .intel-empty{font-size:.72rem;color:#64748b;padding:6px 4px}
 .feed-header{padding:12px 14px;border-bottom:1px solid #1e3a55;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#94a3b8;font-weight:600;display:flex;justify-content:space-between;align-items:center;background:#0a1220;flex-shrink:0}
@@ -408,13 +408,13 @@ body.show-hype .venue-hype{display:block}
     <label class="layer-item"><input type="checkbox" id="lyHype"/><span class="layer-swatch" style="background:#16a34a;border-radius:3px;border:1px solid #444;font-size:9px">⚡</span> Hype</label>
     <div class="layers-divider"></div>
     <div class="layers-hint">Toggles filter map pins and the event feed. Time filters (header) control the date window.</div>
-  </div>
-  <div id="map"></div>
-  <div id="feed">
     <div class="intel-desk" id="intelDesk">
       <div class="intel-head"><span>Intel desk</span><span class="intel-updated" id="intelUpdated"></span></div>
       <div class="intel-body" id="intelBody"><div class="intel-empty">Loading desk…</div></div>
     </div>
+  </div>
+  <div id="map"></div>
+  <div id="feed">
     <div class="feed-header">Event intel <span class="feed-count" id="feedCount">—</span></div>
     <div class="feed-scroll" id="feedScroll"></div>
   </div>
