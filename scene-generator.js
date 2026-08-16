@@ -1,118 +1,142 @@
 /*
-  Get Outside Mid Atlantic — automated scene banner generator.
-
-  No photos, no manual image picking. Each card banner is an SVG rendered
-  entirely from that card's own headline text (data-scene attribute).
-  A weekly content update just changes the text — the artwork updates
-  itself by keyword match. Add new templates/motifs below as the
-  content vocabulary grows.
+  Get Outside Mid Atlantic — upgraded scene banner generator
+  Closer to the South Park / construction-paper character style
+  while remaining pure SVG and fully automatic.
 */
+
 (function () {
   var TEMPLATES = {
     nightlife: function () {
-      return '<rect width="300" height="170" fill="#1e1b4b"/>' +
-        '<rect x="0" y="105" width="60" height="65" fill="#312e81"/>' +
-        '<rect x="55" y="85" width="55" height="85" fill="#1e1b4b"/>' +
-        '<rect x="105" y="115" width="70" height="55" fill="#312e81"/>' +
-        '<rect x="170" y="95" width="50" height="75" fill="#1e1b4b"/>' +
-        '<rect x="215" y="125" width="85" height="45" fill="#312e81"/>' +
-        '<path d="M0 90 Q75 122 150 90 T300 90" stroke="#fbbf24" stroke-width="2" fill="none"/>' +
-        '<circle cx="30" cy="94" r="3" fill="#fbbf24"/>' +
-        '<circle cx="90" cy="106" r="3" fill="#fbbf24"/>' +
-        '<circle cx="150" cy="95" r="3" fill="#fbbf24"/>' +
-        '<circle cx="210" cy="106" r="3" fill="#fbbf24"/>' +
-        '<circle cx="270" cy="94" r="3" fill="#fbbf24"/>';
+      return '
+        <rect width="300" height="170" fill="#1e1b4b"/>
+        <rect x="0" y="100" width="70" height="70" fill="#312e81"/>
+        <rect x="60" y="80" width="65" height="90" fill="#1e1b4b"/>
+        <rect x="115" y="110" width="80" height="60" fill="#312e81"/>
+        <rect x="185" y="90" width="55" height="80" fill="#1e1b4b"/>
+        <rect x="230" y="120" width="70" height="50" fill="#312e81"/>
+        <path d="M0 88 Q75 120 150 88 T300 88" stroke="#fbbf24" stroke-width="3.5" fill="none"/>
+        <circle cx="40" cy="92" r="4" fill="#fbbf24"/>
+        <circle cx="100" cy="105" r="4" fill="#fbbf24"/>
+        <circle cx="160" cy="93" r="4" fill="#fbbf24"/>
+        <circle cx="220" cy="105" r="4" fill="#fbbf24"/>
+        <circle cx="270" cy="92" r="4" fill="#fbbf24"/>
+      ';
     },
+
     waterfront: function () {
-      return '<rect width="300" height="170" fill="#0c2d48"/>' +
-        '<rect x="0" y="120" width="300" height="50" fill="#1d6fa5"/>' +
-        '<path d="M0 128 Q40 120 80 130 T160 126 T240 132 T300 126" stroke="#bae6fd" stroke-width="2.5" fill="none"/>' +
-        '<rect x="60" y="95" width="14" height="35" fill="#0c4a6e"/>' +
-        '<rect x="130" y="95" width="14" height="35" fill="#0c4a6e"/>' +
-        '<rect x="200" y="95" width="14" height="35" fill="#0c4a6e"/>' +
-        '<rect x="40" y="88" width="220" height="10" fill="#475569"/>';
+      return '
+        <rect width="300" height="170" fill="#0c2d48"/>
+        <rect x="0" y="115" width="300" height="55" fill="#1d6fa5"/>
+        <path d="M0 122 Q50 112 100 125 T200 120 T300 128" stroke="#bae6fd" stroke-width="3" fill="none"/>
+        <rect x="50" y="88" width="18" height="40" fill="#0c4a6e" stroke="#0a3a58" stroke-width="2"/>
+        <rect x="130" y="88" width="18" height="40" fill="#0c4a6e" stroke="#0a3a58" stroke-width="2"/>
+        <rect x="210" y="88" width="18" height="40" fill="#0c4a6e" stroke="#0a3a58" stroke-width="2"/>
+        <rect x="30" y="80" width="240" height="12" fill="#475569"/>
+      ';
     },
+
     sunsetKayak: function () {
-      return '<rect width="300" height="170" fill="#3b1d0a"/>' +
-        '<circle cx="150" cy="90" r="42" fill="#f59e0b"/>' +
-        '<rect x="0" y="115" width="300" height="55" fill="#3b1d0a"/>' +
-        '<path d="M0 118 Q75 108 150 118 T300 118 V125 Q225 115 150 125 T0 125 Z" fill="#78350f"/>' +
-        '<path d="M100 140 q30 -12 60 0 q-5 8 -30 8 q-25 0 -30 -8 z" fill="#111827"/>' +
-        '<polygon points="245,170 260,145 275,170" fill="#7f1d1d"/>' +
-        '<polygon points="252,170 260,153 268,170" fill="#f59e0b"/>';
+      return '
+        <rect width="300" height="170" fill="#3b1d0a"/>
+        <circle cx="150" cy="85" r="48" fill="#f59e0b"/>
+        <rect x="0" y="110" width="300" height="60" fill="#3b1d0a"/>
+        <path d="M0 115 Q80 102 150 115 T300 115 V125 Q220 112 150 125 T0 125 Z" fill="#78350f"/>
+        <path d="M95 138 q35 -14 70 0 q-6 9 -35 9 q-29 0 -35 -9 z" fill="#111827"/>
+        <polygon points="240,170 258,140 276,170" fill="#7f1d1d"/>
+        <polygon points="248,170 258,148 268,170" fill="#f59e0b"/>
+      ';
     },
+
     river: function () {
-      return '<rect width="300" height="170" fill="#052e28"/>' +
-        '<path d="M0 130 Q75 100 150 130 T300 130 V170 H0 Z" fill="#0f6e56"/>' +
-        '<path d="M0 150 Q75 125 150 150 T300 150 V170 H0 Z" fill="#16a34a"/>' +
-        '<circle cx="230" cy="55" r="42" fill="#064e3b"/>' +
-        '<rect x="210" y="65" width="16" height="24" rx="2" fill="#34d399"/>' +
-        '<rect x="232" y="60" width="16" height="29" rx="2" fill="#34d399"/>';
+      return '
+        <rect width="300" height="170" fill="#052e28"/>
+        <path d="M0 125 Q80 95 150 125 T300 125 V170 H0 Z" fill="#0f6e56"/>
+        <path d="M0 145 Q80 120 150 145 T300 145 V170 H0 Z" fill="#16a34a"/>
+        <circle cx="235" cy="50" r="46" fill="#064e3b"/>
+        <rect x="215" y="58" width="18" height="28" rx="2" fill="#34d399"/>
+        <rect x="238" y="52" width="18" height="34" rx="2" fill="#34d399"/>
+      ';
     },
+
     stage: function () {
-      return '<rect width="300" height="170" fill="#3b0a1e"/>' +
-        '<polygon points="90,10 210,10 240,55 60,55" fill="#7c2d4a"/>' +
-        '<rect x="80" y="55" width="140" height="65" fill="#5b1f38"/>' +
-        '<circle cx="110" cy="30" r="6" fill="#f9c9dc"/>' +
-        '<circle cx="150" cy="22" r="6" fill="#f9c9dc"/>' +
-        '<circle cx="190" cy="30" r="6" fill="#f9c9dc"/>' +
-        '<circle cx="60" cy="140" r="10" fill="#1e1b4b"/>' +
-        '<circle cx="95" cy="145" r="10" fill="#1e1b4b"/>' +
-        '<circle cx="130" cy="138" r="10" fill="#1e1b4b"/>' +
-        '<circle cx="165" cy="146" r="10" fill="#1e1b4b"/>' +
-        '<circle cx="200" cy="139" r="10" fill="#1e1b4b"/>' +
-        '<circle cx="235" cy="145" r="10" fill="#1e1b4b"/>';
+      return '
+        <rect width="300" height="170" fill="#3b0a1e"/>
+        <polygon points="85,8 215,8 245,52 55,52" fill="#7c2d4a"/>
+        <rect x="75" y="52" width="150" height="70" fill="#5b1f38"/>
+        <circle cx="105" cy="28" r="7" fill="#f9c9dc"/>
+        <circle cx="150" cy="20" r="7" fill="#f9c9dc"/>
+        <circle cx="195" cy="28" r="7" fill="#f9c9dc"/>
+        <circle cx="55" cy="140" r="11" fill="#1e1b4b"/>
+        <circle cx="95" cy="146" r="11" fill="#1e1b4b"/>
+        <circle cx="140" cy="138" r="11" fill="#1e1b4b"/>
+        <circle cx="185" cy="145" r="11" fill="#1e1b4b"/>
+        <circle cx="230" cy="140" r="11" fill="#1e1b4b"/>
+      ';
     },
+
     whitewater: function () {
-      return '<rect width="300" height="170" fill="#0a1f33"/>' +
-        '<polygon points="0,105 60,35 120,105" fill="#0c4a6e"/>' +
-        '<polygon points="90,105 160,20 230,105" fill="#0369a1"/>' +
-        '<polygon points="200,105 260,50 300,105" fill="#0c4a6e"/>' +
-        '<rect x="0" y="105" width="300" height="65" fill="#0ea5e9"/>' +
-        '<path d="M0 125 Q40 115 80 127 T160 123 T240 129 T300 123" stroke="#e0f2fe" stroke-width="3" fill="none"/>' +
-        '<path d="M0 145 Q40 137 80 147 T160 143 T240 149 T300 143" stroke="#bae6fd" stroke-width="3" fill="none"/>';
+      return '
+        <rect width="300" height="170" fill="#0a1f33"/>
+        <polygon points="0,100 55,30 110,100" fill="#0c4a6e"/>
+        <polygon points="85,100 155,18 225,100" fill="#0369a1"/>
+        <polygon points="195,100 255,45 300,100" fill="#0c4a6e"/>
+        <rect x="0" y="100" width="300" height="70" fill="#0ea5e9"/>
+        <path d="M0 120 Q45 108 90 124 T180 118 T270 126 T300 120" stroke="#e0f2fe" stroke-width="3.5" fill="none"/>
+        <path d="M0 142 Q45 132 90 146 T180 140 T270 148 T300 142" stroke="#bae6fd" stroke-width="3.5" fill="none"/>
+      ';
     },
+
     fallback: function () {
-      return '<rect width="300" height="170" fill="#1c1917"/>' +
-        '<polygon points="20,150 90,60 150,150" fill="#44403c"/>' +
-        '<polygon points="120,150 190,45 260,150" fill="#57534e"/>' +
-        '<circle cx="240" cy="40" r="20" fill="#fbbf24"/>' +
-        '<rect x="0" y="150" width="300" height="20" fill="#292524"/>';
+      return '
+        <rect width="300" height="170" fill="#1c1917"/>
+        <polygon points="15,155 95,55 155,155" fill="#44403c"/>
+        <polygon points="115,155 195,40 270,155" fill="#57534e"/>
+        <circle cx="245" cy="38" r="22" fill="#fbbf24"/>
+        <rect x="0" y="150" width="300" height="20" fill="#292524"/>
+      ';
     }
   };
 
+  // Larger, clearer motifs that feel closer to the character style
   var MOTIFS = {
-    peach: { x: 252, y: 10, svg:
-      '<circle cx="12" cy="14" r="9" fill="#fb923c"/>' +
-      '<circle cx="7" cy="12" r="6" fill="#fdba74"/>' +
-      '<path d="M12 5 q3 -4 7 -2" stroke="#4ade80" stroke-width="2" fill="none"/>' },
-    mug: { x: 252, y: 10, svg:
-      '<rect x="2" y="6" width="14" height="16" rx="2" fill="#f8fafc"/>' +
-      '<path d="M16 9 h5 a4 4 0 0 1 0 8 h-5" stroke="#f8fafc" stroke-width="2" fill="none"/>' +
-      '<rect x="2" y="6" width="14" height="4" fill="#fbbf24"/>' },
-    football: { x: 252, y: 12, svg:
-      '<ellipse cx="12" cy="14" rx="12" ry="8" fill="#78350f" transform="rotate(-20 12 14)"/>' +
-      '<line x1="6" y1="14" x2="18" y2="14" stroke="#f8fafc" stroke-width="1.5" transform="rotate(-20 12 14)"/>' },
-    firework: { x: 250, y: 16, svg:
-      '<g stroke="#fbbf24" stroke-width="2">' +
-      '<line x1="12" y1="4" x2="12" y2="-6"/>' +
-      '<line x1="4" y1="12" x2="-4" y2="4"/>' +
-      '<line x1="20" y1="12" x2="28" y2="4"/>' +
-      '<line x1="4" y1="20" x2="-4" y2="24"/>' +
-      '<line x1="20" y1="20" x2="28" y2="24"/>' +
-      '</g><circle cx="12" cy="12" r="3" fill="#fbbf24"/>' },
-    note: { x: 252, y: 8, svg:
-      '<circle cx="6" cy="20" r="4" fill="#f472b6"/>' +
-      '<circle cx="18" cy="16" r="4" fill="#f472b6"/>' +
-      '<path d="M10 20 V6 L22 3 V16" stroke="#f472b6" stroke-width="2" fill="none"/>' },
-    tent: { x: 254, y: 10, svg:
-      '<polygon points="12,4 22,22 2,22" fill="#facc15"/>' +
-      '<line x1="12" y1="4" x2="12" y2="22" stroke="#78350f" stroke-width="1.5"/>' },
-    flame: { x: 256, y: 10, svg:
-      '<path d="M12 2 C6 10 6 14 9 18 C7 15 9 13 10 12 C10 16 14 17 14 20 C18 17 18 10 12 2 Z" fill="#f97316"/>' }
+    peach: { x: 245, y: 8, svg: '
+      <circle cx="14" cy="16" r="11" fill="#fb923c"/>
+      <circle cx="8" cy="14" r="7" fill="#fdba74"/>
+      <path d="M14 4 q4 -5 9 -2" stroke="#4ade80" stroke-width="2.5" fill="none"/>
+    '},
+    mug: { x: 245, y: 8, svg: '
+      <rect x="2" y="6" width="16" height="18" rx="2" fill="#f8fafc"/>
+      <path d="M18 9 h6 a5 5 0 0 1 0 10 h-6" stroke="#f8fafc" stroke-width="2.5" fill="none"/>
+      <rect x="2" y="6" width="16" height="5" fill="#fbbf24"/>
+    '},
+    football: { x: 242, y: 10, svg: '
+      <ellipse cx="14" cy="16" rx="14" ry="9" fill="#78350f" transform="rotate(-18 14 16)"/>
+      <line x1="6" y1="16" x2="22" y2="16" stroke="#f8fafc" stroke-width="2" transform="rotate(-18 14 16)"/>
+    '},
+    firework: { x: 242, y: 12, svg: '
+      <g stroke="#fbbf24" stroke-width="2.5">
+        <line x1="14" y1="2" x2="14" y2="-8"/>
+        <line x1="4" y1="12" x2="-4" y2="4"/>
+        <line x1="24" y1="12" x2="32" y2="4"/>
+        <line x1="4" y1="22" x2="-4" y2="28"/>
+        <line x1="24" y1="22" x2="32" y2="28"/>
+      </g>
+      <circle cx="14" cy="14" r="4" fill="#fbbf24"/>
+    '},
+    note: { x: 245, y: 6, svg: '
+      <circle cx="7" cy="22" r="5" fill="#f472b6"/>
+      <circle cx="21" cy="17" r="5" fill="#f472b6"/>
+      <path d="M12 22 V5 L25 2 V17" stroke="#f472b6" stroke-width="2.5" fill="none"/>
+    '},
+    tent: { x: 248, y: 8, svg: '
+      <polygon points="14,3 26,24 2,24" fill="#facc15"/>
+      <line x1="14" y1="3" x2="14" y2="24" stroke="#78350f" stroke-width="2"/>
+    '},
+    flame: { x: 250, y: 8, svg: '
+      <path d="M14 2 C7 11 7 16 10 20 C8 17 10 14 11 13 C11 18 16 19 16 22 C21 18 21 10 14 2 Z" fill="#f97316"/>
+    '}
   };
 
-  // First matching rule wins the background template.
   var TEMPLATE_RULES = [
     { test: /lantern|dusk|rooftop|nightlife|string light/i, id: 'nightlife' },
     { test: /dock|marina|boardwalk|harbor|pirate/i, id: 'waterfront' },
@@ -122,7 +146,6 @@
     { test: /music|fest|concert|steelers|stage|camp/i, id: 'stage' }
   ];
 
-  // Up to two motif icons layered on top, in priority order.
   var MOTIF_RULES = [
     { test: /peach/i, id: 'peach' },
     { test: /brewery|beer|ale/i, id: 'mug' },
@@ -158,7 +181,7 @@
       var m = MOTIFS[id];
       return m ? '<g transform="translate(' + m.x + ',' + m.y + ')">' + m.svg + '</g>' : '';
     }).join('');
-    var label = text.replace(/"/g, '&quot;');
+    var label = text.replace(/"/g, '"');
     return '<svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="' + label + '" style="width:100%;height:100%;display:block;">' +
       templateFn() + motifSvg + '</svg>';
   }
