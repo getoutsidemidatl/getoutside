@@ -1,12 +1,12 @@
 # Get Outside Mid Atlantic
 
-Source for [get-outside.info](https://get-outside.info) â€” your guide to better weekends across the Mid-Atlantic.
+Source for [get-outside.info](https://get-outside.info) — your guide to better weekends across the Mid-Atlantic.
 
 Get Outside Mid Atlantic covers outdoor recreation across Maryland, Virginia, Pennsylvania, Delaware, and West Virginia: boating, fishing, hiking, camping, breweries, and live music, organized around seven regions so people can find what's happening near them instead of scrolling a generic events feed.
 
 ## Pages
 
-- **`index.html`** â€” the main landing page: hero, about, and links to our social channels (Instagram, TikTok, Facebook, YouTube, X).
+- **`index.html`** — the main landing page: hero, about, and links to our social channels (Instagram, TikTok, Facebook, YouTube, X).
 
 ## Regions
 
@@ -24,9 +24,9 @@ Plain HTML with [Tailwind CSS](https://tailwindcss.com) via CDN, no build step. 
 
 ## Deployment
 
-This repo deploys automatically to [Netlify](https://netlify.com) on every push to `master`. No build command â€” Netlify just serves the static files as-is.
+This repo deploys automatically to [Netlify](https://netlify.com) on every push to **`main`** (and a synced **`master`** branch for older Netlify branch settings). No build command — Netlify just serves the static files as-is.
 
-To publish a change: commit it here (via git, or GitHub's "Upload files" if you're not on the command line), and the live site updates within a couple minutes.
+To publish a change: commit it here, and the live site updates within a couple minutes. If the site stays stale, check Netlify → Site settings → Build & deploy → Production branch is set to `main` (or `master`).
 
 ## Social
 
@@ -36,4 +36,4 @@ To publish a change: commit it here (via git, or GitHub's "Upload files" if you'
 - YouTube: [@getoutsidemidatlantic](https://youtube.com/@getoutsidemidatlantic)
 - X: [@getoutsidematl](https://x.com/getoutsidematl)
 
-<!-- deploy-bust 2026-08-11T05:34:15Z -->
+<!-- deploy-bust 2026-08-16T15:05Z -->
