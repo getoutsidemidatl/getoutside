@@ -34,13 +34,13 @@ South Park style construction paper cutout animation, flat solid colors, bold th
   Kevin, young adult male, messy dark hair, soaked light blue hoodie, cargo shorts, holding a broken paddle, dripping wet, deadpan resigned expression
   ```
 
-### Riley — The Outdoor Optimist
+### Sam — The Outdoor Optimist
 - **Look:** Curly light brown / dirty-blond hair, olive green fleece pullover, dark hiking pants, sturdy boots, often holding a marshmallow stick or trail map, bright but still deadpan eyes.
 - **Personality:** Sees the best in every trail, every weather, every detour. The one who starts the campfire songs (badly).
 - **Signature prop:** Marshmallow roasting stick, binoculars, or a small backpack.
 - **Prompt snippet:**
   ```
-  Riley, young adult with curly light brown hair, olive green fleece, dark hiking pants, holding a marshmallow stick, deadpan but hopeful expression
+  Sam, young adult with curly light brown hair, olive green fleece, dark hiking pants, holding a marshmallow stick, deadpan but hopeful expression
   ```
 
 ### Jax — The Focused Paddler
@@ -58,7 +58,7 @@ South Park style construction paper cutout animation, flat solid colors, bold th
 
 **Group dock shot (hero / about):**
 ```
-[style prompt], four characters standing side by side on a wooden dock: Dan in green beanie and orange life jacket, Kevin in soaked blue hoodie holding broken paddle, Riley in olive fleece with marshmallow stick, Jax in red cap and blue life vest with paddle, calm water and distant trees in background, bright daylight, deadpan faces looking at camera
+[style prompt], four characters standing side by side on a wooden dock: Dan in green beanie and orange life jacket, Kevin in soaked blue hoodie holding broken paddle, Sam in olive fleece with marshmallow stick, Jax in red cap and blue life vest with paddle, calm water and distant trees in background, bright daylight, deadpan faces looking at camera
 ```
 
 **Festival / Fair card:**
@@ -93,10 +93,10 @@ South Park style construction paper cutout animation, flat solid colors, bold th
 
 ---
 
-## First Asset Pack (generated 2026-08-16)
+## First Asset Pack (updated 2026-08-17)
 
-- Individual portraits (Dan, Kevin, Riley, Jax)
+- Individual portraits (Dan, Kevin, Sam, Jax)
 - Group dock hero
 - Sample featured cards for current weekend themes (Ag Fair, Peach Festival, Waterfront, Campfire)
 
-Use these as the visual source of truth going forward.
+Ops Center branding is locked. Use these as the visual source of truth going forward.
