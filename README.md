@@ -22,6 +22,21 @@ Get Outside Mid Atlantic covers outdoor recreation across Maryland, Virginia, Pe
 
 Plain HTML with [Tailwind CSS](https://tailwindcss.com) via CDN, no build step. Fonts are [Outfit](https://fonts.google.com/specimen/Outfit) (display) and [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (body), loaded from Google Fonts.
 
+## Visual Style (locked 2026-08-16)
+
+**Primary style for website cards + social carousels:** Grok Imagine construction-paper / South Park deadpan aesthetic.
+- Flat colors, bold simple outlines, minimal shading
+- Round heads, small facial features, blank/deadpan expressions
+- Original recurring characters only (never real South Park IP)
+
+### Core Characters
+- **Dan** — green beanie, orange life jacket, khaki shorts. The steady one.
+- **Kevin** — messy hair, soaked blue hoodie, broken paddle. Always somehow wet or injured.
+- **Riley** — curly hair, olive fleece, hiking pants, marshmallow stick. The outdoor optimist.
+- **Jax** — blond hair under red cap, blue life vest, board shorts, kayak paddle. Focused paddler.
+
+**Usage rule:** Pre-generate high-value featured cards and carousel hero slides with these characters via Grok Imagine. Keep the existing pure-SVG `scene-generator.js` for bulk/low-priority weekly cards (zero cost, fully automatic).
+
 ## Deployment
 
 This repo deploys automatically to [Netlify](https://netlify.com) on every push to **`main`** (and a synced **`master`** branch for older Netlify branch settings). No build command — Netlify just serves the static files as-is.
@@ -36,4 +51,4 @@ To publish a change: commit it here, and the live site updates within a couple m
 - YouTube: [@getoutsidemidatlantic](https://youtube.com/@getoutsidemidatlantic)
 - X: [@getoutsidematl](https://x.com/getoutsidematl)
 
-<!-- deploy-bust 2026-08-16T15:05Z -->
+<!-- deploy-bust 2026-08-17T00:25Z -->
