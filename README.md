@@ -51,4 +51,4 @@ To publish a change: commit it here, and the live site updates within a couple m
 - YouTube: [@getoutsidemidatlantic](https://youtube.com/@getoutsidemidatlantic)
 - X: [@getoutsidematl](https://x.com/getoutsidematl)
 
-<!-- deploy-bust 2026-08-17T00:25Z -->
+<!-- deploy-bust 2026-08-18T14:55Z weekend-2026-08-21 -->
