@@ -1,0 +1,61 @@
+/* Ops Center Field + Entertainment collapsible layer groups */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.ops-group {
+  margin: 6px 10px 8px;
+  border: 1px solid #1e3a55;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.6);
+  overflow: hidden;
+}
+.ops-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Share Tech Mono', ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  background: rgba(30, 58, 85, 0.35);
+}
+.ops-group-header:hover {
+  color: #e2e8f0;
+  background: rgba(30, 58, 85, 0.55);
+}
+.ops-group-header .ops-chevron {
+  margin-left: auto;
+  transition: transform 0.2s ease;
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+.ops-group.open .ops-chevron {
+  transform: rotate(90deg);
+}
+.ops-group-body {
+  display: none;
+  padding: 4px 0 6px;
+}
+.ops-group.open .ops-group-body {
+  display: block;
+}
+.ops-group .layer-item {
+  padding-left: 18px;
+  font-size: 0.78rem;
+}
+.ops-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+.ops-swatch.field { background: #16a34a; }
+.ops-swatch.entertainment { background: #c026d3; }
+.ops-swatch.festival { background: #db2777; }
+.ops-swatch.history { background: #ca8a04; }
+.ops-swatch.camping { background: #0d9488; }
+.ops-swatch.trail { background: #65a30d; }
