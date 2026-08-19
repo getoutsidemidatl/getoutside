@@ -1,49 +1,63 @@
 {
-  "updated": "2026-08-16T14:00:00-04:00",
-  "headline": "Active & upcoming",
+  "updated": "2026-08-18T15:00:00-04:00",
+  "headline": "Active & upcoming · Aug 21–23 focus",
   "big_money": [
     {
       "tag": "Fair",
-      "title": "State Fair of WV",
-      "note": "Through Aug 23 · Lewisburg · Trace Adkins / Sierra Ferrell energy",
+      "title": "State Fair of WV (final days)",
+      "note": "Through Aug 22 · Lewisburg · Gavin Adcock Fri / Stone Temple Pilots Sat",
       "url": "https://statefairofwv.com",
-      "ends": "2026-08-23"
+      "ends": "2026-08-22"
     },
     {
       "tag": "Fair",
-      "title": "Montgomery County Ag Fair",
-      "note": "Through Aug 22 · Gaithersburg · peak weekend energy",
+      "title": "Montgomery County Ag Fair (final days)",
+      "note": "Through Aug 22 · Gaithersburg · closer weekend energy",
       "url": "https://www.mcagfair.com/",
       "ends": "2026-08-22"
     },
     {
-      "tag": "NFL",
-      "title": "Commanders Open Practice",
-      "note": "Wed Aug 19 · Ashburn · early outdoor session",
-      "url": "https://www.commanders.com/training-camp/",
-      "ends": "2026-08-19"
+      "tag": "MiLB",
+      "title": "Baysox vs Flying Squirrels",
+      "note": "Fri–Sun Aug 21–23 · Prince George's Stadium, Bowie · easy outdoor baseball",
+      "url": "https://www.milb.com/chesapeake",
+      "ends": "2026-08-23"
+    },
+    {
+      "tag": "Festival",
+      "title": "PA Renaissance Faire — Legends of the Sea",
+      "note": "Aug 22–23 · Manheim · full shire weekend",
+      "url": "https://parenfaire.com/",
+      "ends": "2026-08-23"
     }
   ],
   "sleepers": [
     {
       "tag": "Nature",
-      "title": "Quiet nature windows this week",
-      "note": "Irvine / local trails · skip the fair crush",
-      "url": "/weekends/2026-08-13/maryland.html",
+      "title": "Quiet canal / trail windows",
+      "note": "C&O / Blue Ridge / riverside · skip the fair crush",
+      "url": "/weekends/2026-08-21/maryland.html",
       "ends": "2026-08-24"
     },
     {
-      "tag": "MiLB",
-      "title": "Harbor Park Tides stretch",
-      "note": "Norfolk · easier entry than stadium nights",
-      "url": "https://www.milb.com/norfolk",
+      "tag": "Water",
+      "title": "Dragon Boat · Deep Creek",
+      "note": "Sat Aug 22 · Mountain Maryland · spectator-friendly",
+      "url": "/weekends/2026-08-21/maryland.html",
+      "ends": "2026-08-22"
+    },
+    {
+      "tag": "Culture",
+      "title": "Delaware Afro-Foodie + August Quarterly",
+      "note": "Wilmington · Sat food fest + cultural opener Sun",
+      "url": "/weekends/2026-08-21/delaware.html",
       "ends": "2026-08-24"
     },
     {
-      "tag": "College",
-      "title": "Camp / quiet campus windows",
-      "note": "Map layers · D2/D3 still open",
-      "url": "/sports/",
+      "tag": "MLB",
+      "title": "Orioles home stretch",
+      "note": "Camden Yards · check daily slate through weekend",
+      "url": "https://www.mlb.com/orioles",
       "ends": "2026-08-24"
     }
   ]
