@@ -1,193 +1,164 @@
-/**
- * Ops Center — Field + Entertainment layer loader
- * Expects window.map (Leaflet) already created by index.html
- * and a #layers container with sport checkboxes already present.
- */
-(function () {
-  'use strict';
+// Ops Center map-app.js — data-separated layers
+// Sports stay in index.html / soc-data.json. Field + Entertainment load from data/field-sites.json
+// Architecture lock: Sports default open; Field + Entertainment collapsed, sublayers default OFF
 
-  function ready(fn) {
-    if (document.readyState !== 'loading') fn();
-    else document.addEventListener('DOMContentLoaded', fn);
+(function () {
+  const loadingEl = document.getElementById('loading');
+
+  function clearLoading() {
+    if (loadingEl) loadingEl.remove();
   }
 
-  ready(function () {
-    if (!window.map || typeof L === 'undefined') {
-      console.warn('[map-app] window.map or Leaflet missing — Field layers skipped');
-      return;
+  function popupHtml(item) {
+    const title = item.title || item.name || 'Event';
+    const note = item.note || '';
+    const tag = item.tag || item.sublayer || '';
+    const url = item.url || item.official || '#';
+    const city = item.city ? '<div style="font-size:0.75rem;color:#94a3b8;margin-bottom:4px">' + item.city + '</div>' : '';
+    const dates = item.dates ? '<div style="font-size:0.72rem;color:#64748b;margin-bottom:6px">' + item.dates + '</div>' : '';
+    return '<div style="min-width:180px;font-family:system-ui,sans-serif"><div style="font-size:0.7rem;font-weight:700;color:#f59e0b;text-transform:uppercase;margin-bottom:2px">' + tag + '</div><div style="font-weight:700;font-size:0.95rem;margin-bottom:4px">' + title + '</div>' + city + dates + '<div style="font-size:0.8rem;color:#64748b;margin-bottom:8px">' + note + '</div>' + (url && url !== '#' ? '<a href="' + url + '" target="_blank" rel="noopener" style="font-size:0.75rem;color:#0284c7;font-weight:600">Open →</a>' : '') + '</div>';
+  }
+
+  const fallbacks = {
+    'State Fair of WV': [37.8, -80.45],
+    'Montgomery County Ag Fair': [39.14, -77.20],
+    'Commanders Open Practice': [39.05, -77.48],
+    'Quiet nature windows this week': [39.3, -76.6],
+    'Harbor Park Tides stretch': [36.84, -76.28],
+    'Camp / quiet campus windows': [38.9, -77.0]
+  };
+
+  function getLatLng(item) {
+    if (item.lat != null && item.lng != null) return [item.lat, item.lng];
+    if (item.lat != null && item.lon != null) return [item.lat, item.lon];
+    const key = item.title || item.name || '';
+    if (fallbacks[key]) return fallbacks[key];
+    return [39.0, -77.5];
+  }
+
+  function addMarkers(items, color) {
+    if (!Array.isArray(items)) return;
+    const m = window.map || (typeof map !== 'undefined' ? map : null);
+    if (!m) return;
+    items.forEach(function(item) {
+      const latlng = getLatLng(item);
+      const marker = L.circleMarker(latlng, {
+        radius: 9,
+        fillColor: color,
+        color: '#0b1220',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(m);
+      marker.bindPopup(popupHtml(item));
+    });
+  }
+
+  // Field / Entertainment layer groups
+  const fieldLayerGroups = {};
+  const fieldColor = {
+    Camping: '#16a34a', Trails: '#0d9488', 'Public land': '#65a30d',
+    'Fishing/Boating': '#0284c7', Paddling: '#06b6d4', Lakes: '#2563eb',
+    Hunting: '#a16207', Motorized: '#ca8a04', Winter: '#e0f2fe',
+    History: '#a78bfa', 'Scenic Lookouts': '#f472b6',
+    Concerts: '#e11d48', Festivals: '#f59e0b', Breweries: '#b45309'
+  };
+
+  function ensureFieldGroup(name) {
+    if (!fieldLayerGroups[name]) {
+      fieldLayerGroups[name] = L.layerGroup();
     }
+    return fieldLayerGroups[name];
+  }
 
-    const groups = {};
-    const subGroups = {};
+  function loadFieldSites() {
+    fetch('./data/field-sites.json', { cache: 'no-store' })
+      .then(function(r) { if (!r.ok) throw new Error('field-sites ' + r.status); return r.json(); })
+      .then(function(data) {
+        const sites = (data && data.sites) || [];
+        const m = window.map || (typeof map !== 'undefined' ? map : null);
+        if (!m) { console.warn('[map-app] no map for field sites'); return; }
 
-    function ensureGroup(name) {
-      if (!groups[name]) {
-        groups[name] = L.layerGroup();
-      }
-      return groups[name];
-    }
+        sites.forEach(function(site) {
+          const layer = site.layer || 'Field';
+          const sub = site.sublayer || site.category || 'General';
+          const group = ensureFieldGroup(layer + '|' + sub);
+          const color = fieldColor[sub] || fieldColor[layer] || '#38bdf8';
+          const latlng = getLatLng(site);
+          const marker = L.circleMarker(latlng, {
+            radius: 8,
+            fillColor: color,
+            color: '#fff',
+            weight: 1.5,
+            opacity: 1,
+            fillOpacity: 0.85
+          });
+          marker.bindPopup(popupHtml(site));
+          group.addLayer(marker);
+        });
 
-    function ensureSub(layer, sub) {
-      const key = layer + '|' + (sub || 'General');
-      if (!subGroups[key]) {
-        subGroups[key] = L.layerGroup();
-        ensureGroup(layer).addLayer(subGroups[key]);
-      }
-      return subGroups[key];
-    }
+        // Inject collapsible UI into #layers
+        const box = document.getElementById('layers');
+        if (box && data.layer_groups) {
+          Object.keys(data.layer_groups || {}).forEach(function(groupName) {
+            const subs = data.layer_groups[groupName] || [];
+            const div = document.createElement('div');
+            div.className = 'ops-group';
+            div.innerHTML = '<div class="ops-group-header"><span>' + groupName + '</span><span class="ops-chevron">▶</span></div><div class="ops-group-body"></div>';
+            const body = div.querySelector('.ops-group-body');
+            const header = div.querySelector('.ops-group-header');
+            header.addEventListener('click', function(){ div.classList.toggle('open'); });
 
-    const colorFor = {
-      Field: '#16a34a',
-      Entertainment: '#c026d3',
-      Festivals: '#db2777',
-      History: '#ca8a04',
-      Camping: '#0d9488',
-      Trails: '#65a30d'
-    };
-
-    function markerColor(site) {
-      return colorFor[site.sublayer] || colorFor[site.layer] || '#38bdf8';
-    }
-
-    function makeMarker(site) {
-      const c = markerColor(site);
-      const icon = L.divIcon({
-        className: '',
-        html: `<div style="width:16px;height:16px;border-radius:50%;background:${c};border:2px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.5)"></div>`,
-        iconSize: [16, 16],
-        iconAnchor: [8, 8],
-        popupAnchor: [0, -10]
-      });
-      const m = L.marker([site.lat, site.lon], { icon });
-      const dates = site.dates ? `<div style="font-size:.72rem;color:#94a3b8;margin-top:2px">${site.dates}</div>` : '';
-      const note = site.note ? `<div style="font-size:.75rem;color:#c5d4e8;margin-top:6px;line-height:1.35">${site.note}</div>` : '';
-      const link = site.official
-        ? `<a href="${site.official}" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:.72rem;color:#7dd3fc">Official →</a>`
-        : '';
-      m.bindPopup(
-        `<div style="min-width:180px">
-          <div style="font-weight:700;color:#7dd3fc;font-size:.9rem">${site.name}</div>
-          <div style="font-size:.75rem;color:#a8b8d0">${site.city || ''} · ${site.layer}${site.sublayer ? ' / ' + site.sublayer : ''}</div>
-          ${dates}${note}${link}
-        </div>`
-      );
-      return m;
-    }
-
-    function injectLayerUI(layerName, sublayers) {
-      const box = document.getElementById('layers');
-      if (!box) return;
-
-      // Avoid duplicate groups
-      if (document.querySelector('.ops-group[data-layer="' + layerName + '"]')) return;
-
-      const group = document.createElement('div');
-      group.className = 'ops-group';
-      group.dataset.layer = layerName;
-
-      const header = document.createElement('div');
-      header.className = 'ops-group-header';
-      header.innerHTML = `<span class="ops-swatch ${layerName.toLowerCase()}"></span><span>${layerName}</span><span class="ops-chevron">▶</span>`;
-      header.addEventListener('click', function () {
-        group.classList.toggle('open');
-      });
-
-      const body = document.createElement('div');
-      body.className = 'ops-group-body';
-
-      // Master toggle for the whole group
-      const master = document.createElement('label');
-      master.className = 'layer-item';
-      master.innerHTML = `<input type="checkbox" data-ops-master="${layerName}"> <span>Show ${layerName}</span>`;
-      body.appendChild(master);
-
-      Object.keys(sublayers).forEach(function (sub) {
-        const lbl = document.createElement('label');
-        lbl.className = 'layer-item';
-        lbl.innerHTML = `<input type="checkbox" data-ops-sub="${layerName}|${sub}"> <span>${sub}</span>`;
-        body.appendChild(lbl);
-      });
-
-      group.appendChild(header);
-      group.appendChild(body);
-      box.appendChild(group);
-
-      // Wire master
-      master.querySelector('input').addEventListener('change', function (e) {
-        const on = e.target.checked;
-        const g = ensureGroup(layerName);
-        if (on) {
-          window.map.addLayer(g);
-        } else {
-          window.map.removeLayer(g);
-          // also uncheck subs
-          body.querySelectorAll('input[data-ops-sub]').forEach(function (cb) {
-            cb.checked = false;
+            subs.forEach(function(sub) {
+              const key = groupName + '|' + sub;
+              const g = ensureFieldGroup(key);
+              const label = document.createElement('label');
+              label.className = 'layer-item';
+              const cb = document.createElement('input');
+              cb.type = 'checkbox';
+              cb.addEventListener('change', function() {
+                if (cb.checked) g.addTo(m); else m.removeLayer(g);
+              });
+              const swatch = document.createElement('span');
+              swatch.className = 'ops-swatch';
+              swatch.style.background = fieldColor[sub] || '#38bdf8';
+              label.appendChild(cb);
+              label.appendChild(swatch);
+              label.appendChild(document.createTextNode(' ' + sub));
+              body.appendChild(label);
+            });
+            box.appendChild(div);
+          });
+        } else if (box) {
+          // fallback simple groups
+          ['Field', 'Entertainment'].forEach(function(groupName) {
+            const div = document.createElement('div');
+            div.className = 'ops-group';
+            div.innerHTML = '<div class="ops-group-header"><span>' + groupName + '</span><span class="ops-chevron">▶</span></div><div class="ops-group-body"></div>';
+            div.querySelector('.ops-group-header').addEventListener('click', function(){ div.classList.toggle('open'); });
+            box.appendChild(div);
           });
         }
-      });
-
-      // Wire subs
-      body.querySelectorAll('input[data-ops-sub]').forEach(function (cb) {
-        cb.addEventListener('change', function (e) {
-          const key = e.target.dataset.opsSub;
-          const [layer, sub] = key.split('|');
-          const sg = ensureSub(layer, sub);
-          if (e.target.checked) {
-            // ensure group is on map
-            const g = ensureGroup(layer);
-            if (!window.map.hasLayer(g)) {
-              window.map.addLayer(g);
-              const masterCb = body.querySelector('input[data-ops-master]');
-              if (masterCb) masterCb.checked = true;
-            }
-            // markers already added to sub in addMarkers
-          } else {
-            // remove markers from this sub? or just leave, since group controls visibility
-            // for simplicity, subs control whether their markers are in the group
-            // but since we add all to subs at load, we can toggle the sub layer
-            if (window.map.hasLayer(sg)) {
-              // actually sub is already in group, so to hide we need to remove from group
-              ensureGroup(layer).removeLayer(sg);
-            } else {
-              ensureGroup(layer).addLayer(sg);
-            }
-            // Wait, better approach needed. For now, keep simple: master controls group, subs are for future filtering.
-          }
-        });
-      });
-    }
-
-    function addMarkers(sites) {
-      const byLayer = {};
-      sites.forEach(function (site) {
-        const layer = site.layer || 'Field';
-        const sub = site.sublayer || site.category || 'General';
-        if (!byLayer[layer]) byLayer[layer] = {};
-        if (!byLayer[layer][sub]) byLayer[layer][sub] = [];
-        byLayer[layer][sub].push(site);
-
-        const m = makeMarker(site);
-        ensureSub(layer, sub).addLayer(m);
-      });
-
-      Object.keys(byLayer).forEach(function (layerName) {
-        injectLayerUI(layerName, byLayer[layerName]);
-      });
-    }
-
-    fetch('./data/field-sites.json', { cache: 'no-store' })
-      .then(function (r) {
-        if (!r.ok) throw new Error('field-sites ' + r.status);
-        return r.json();
-      })
-      .then(function (data) {
-        const sites = (data && data.sites) || [];
-        addMarkers(sites);
         console.log('[map-app] loaded', sites.length, 'Field/Entertainment sites');
+        clearLoading();
       })
-      .catch(function (err) {
+      .catch(function(err) {
         console.warn('[map-app] field-sites load failed', err);
+        clearLoading();
       });
-  });
+  }
+
+  // Kick off after a short delay so window.map exists
+  function start() {
+    if (!window.map && typeof map === 'undefined') {
+      setTimeout(start, 200);
+      return;
+    }
+    loadFieldSites();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
 })();
