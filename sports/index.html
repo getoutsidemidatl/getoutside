@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- SOC FORCE DEPLOY 2026-08-20T00:30Z -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"/>
 <title>Get Outside Mid-Atlantic · Sports Operations Center (SOC)</title>
@@ -140,7 +141,7 @@ body.mobile-layers-open .scrim,body.mobile-feed-open .scrim{display:block}
     <label class="layer-item"><input type="checkbox" id="lyHype"> <span class="layer-swatch" style="background:#ec4899"></span> <span class="layer-label">Hype mode</span></label>
   </aside>
 
-  <div id="map"><div id="statusBar">Loading SOC data…</div></div>
+  <div id="map"><div id="statusBar">SOC loading v2…</div></div>
 
   <aside id="feed">
     <div class="feed-header">
@@ -314,7 +315,7 @@ body.mobile-layers-open .scrim,body.mobile-feed-open .scrim{display:block}
     scrim && scrim.addEventListener('click', closeMobileDrawers);
     window.addEventListener('resize', function(){ if (window.innerWidth > 900) closeMobileDrawers(); try{ map.invalidateSize(); }catch(e){} });
   })();
-  setStatus('Loading SOC data…');
+  setStatus('SOC loading v2…');
   fetch('./data/soc-data.json', { cache: 'no-store' })
     .then(function(r){ if (!r.ok) throw new Error('soc-data ' + r.status); return r.json(); })
     .then(function(data){
