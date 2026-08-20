@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = "echo 'static site - no build step'"
+
+[[headers]]
+  for = "/sports/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
