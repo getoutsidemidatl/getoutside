@@ -1,1 +1,23 @@
-{"updated":"2026-08-20","window":"2026-08-21","venues":[],"marquee":[],"_note":"Full data will be restored in next commit — placeholder to establish path"}
+{
+  "updated": "2026-08-23",
+  "window": "2026-08-23 to 2026-08-30",
+  "venues": [],
+  "marquee": [
+    {
+      "name": "East Coast Surfing Championships",
+      "dates": "Aug 23–30",
+      "location": "Virginia Beach, VA"
+    },
+    {
+      "name": "Maryland State Fair (block 1)",
+      "dates": "Aug 27–30",
+      "location": "Lutherville-Timonium, MD"
+    },
+    {
+      "name": "Maryland Renaissance Festival opens",
+      "dates": "Aug 29–30",
+      "location": "Crownsville, MD"
+    }
+  ],
+  "_note": "SOC refresh 2026-08-23. Full venues restore deferred; intel ticker + field-sites carry primary Ops content."
+}

@@ -1,64 +1,73 @@
 {
-  "updated": "2026-08-18T15:00:00-04:00",
-  "headline": "Active & upcoming · Aug 21–23 focus",
+  "updated": "2026-08-23T03:10:00-04:00",
+  "headline": "Post-fair reset · sunny window through midweek · next focus Aug 28–30",
   "big_money": [
     {
-      "tag": "Fair",
-      "title": "State Fair of WV (final days)",
-      "note": "Through Aug 22 · Lewisburg · Gavin Adcock Fri / Stone Temple Pilots Sat",
-      "url": "https://statefairofwv.com",
-      "ends": "2026-08-22"
+      "tag": "Surf",
+      "title": "East Coast Surfing Championships (ongoing)",
+      "note": "Aug 23–30 · Virginia Beach Oceanfront · longest-running surf contest in the world · free beach viewing",
+      "url": "https://www.surfecsc.com/",
+      "ends": "2026-08-30"
     },
     {
-      "tag": "Fair",
-      "title": "Montgomery County Ag Fair (final days)",
-      "note": "Through Aug 22 · Gaithersburg · closer weekend energy",
-      "url": "https://www.mcagfair.com/",
-      "ends": "2026-08-22"
-    },
-    {
-      "tag": "MiLB",
-      "title": "Baysox vs Flying Squirrels",
-      "note": "Fri–Sun Aug 21–23 · Prince George's Stadium, Bowie · easy outdoor baseball",
-      "url": "https://www.milb.com/chesapeake",
+      "tag": "MLB",
+      "title": "Orioles vs Rays (finale) then road trip",
+      "note": "Sun 1:35 PM Camden Yards final home before STL series · then @ Cardinals Tue–Thu",
+      "url": "https://www.mlb.com/orioles",
       "ends": "2026-08-23"
     },
     {
-      "tag": "Festival",
-      "title": "PA Renaissance Faire — Legends of the Sea",
-      "note": "Aug 22–23 · Manheim · full shire weekend",
-      "url": "https://parenfaire.com/",
-      "ends": "2026-08-23"
+      "tag": "MLB",
+      "title": "Nationals home vs Rockies next week",
+      "note": "Mon–Thu Aug 24–27 Nationals Park · then Miami series · outdoor baseball windows",
+      "url": "https://www.mlb.com/nationals",
+      "ends": "2026-08-27"
+    },
+    {
+      "tag": "Fair",
+      "title": "Maryland State Fair opens",
+      "note": "Aug 27–30 (first block) · Lutherville-Timonium · rides, livestock, classic fair energy",
+      "url": "https://www.marylandstatefair.com/",
+      "ends": "2026-08-30"
     }
   ],
   "sleepers": [
     {
       "tag": "Nature",
-      "title": "Quiet canal / trail windows",
-      "note": "C&O / Blue Ridge / riverside · skip the fair crush",
+      "title": "Clear-sky recovery window Mon–Wed",
+      "note": "Sunny, low humidity, highs low–mid 80s · ideal for C&O, Skyline Drive, Assateague, Deep Creek",
       "url": "/weekends/2026-08-21/maryland.html",
-      "ends": "2026-08-24"
+      "ends": "2026-08-26"
+    },
+    {
+      "tag": "Ren Faire",
+      "title": "Maryland Renaissance Festival opens",
+      "note": "Sat–Sun Aug 29–30 · Crownsville · 50th season kickoff · turkey legs + full shire",
+      "url": "https://www.rennfest.com/",
+      "ends": "2026-08-30"
+    },
+    {
+      "tag": "MiLB",
+      "title": "Baysox @ Harrisburg series",
+      "note": "Tue–Sun Aug 25–30 · FNB Field · easy mid-week outdoor baseball run",
+      "url": "https://www.milb.com/chesapeake",
+      "ends": "2026-08-30"
     },
     {
       "tag": "Water",
-      "title": "Dragon Boat · Deep Creek",
-      "note": "Sat Aug 22 · Mountain Maryland · spectator-friendly",
-      "url": "/weekends/2026-08-21/maryland.html",
-      "ends": "2026-08-22"
-    },
-    {
-      "tag": "Culture",
-      "title": "Delaware Afro-Foodie + August Quarterly",
-      "note": "Wilmington · Sat food fest + cultural opener Sun",
-      "url": "/weekends/2026-08-21/delaware.html",
-      "ends": "2026-08-24"
-    },
-    {
-      "tag": "MLB",
-      "title": "Orioles home stretch",
-      "note": "Camden Yards · check daily slate through weekend",
-      "url": "https://www.mlb.com/orioles",
-      "ends": "2026-08-24"
+      "title": "Virginia Beach surf + beach culture week",
+      "note": "ECSC continues through Aug 30 · volleyball, BMX, food, live music on the Oceanfront",
+      "url": "https://www.visitvirginiabeach.com/",
+      "ends": "2026-08-30"
     }
-  ]
+  ],
+  "weather_window": {
+    "summary": "Excellent outdoor recovery window after weekend storms. Sunny and less humid Mon–Wed (highs 81–85°F). Chance of showers return late week into next weekend.",
+    "sun": "2026-08-23",
+    "mon": "Sunny · 81–83",
+    "tue": "Sunny · 82",
+    "wed": "Mostly sunny · 85",
+    "thu": "Chance storms · 84–86",
+    "fri_sat": "Partly cloudy / chance storms · mid-80s"
+  }
 }
