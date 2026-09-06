@@ -1,23 +1,28 @@
 {
-  "updated": "2026-08-23",
-  "window": "2026-08-23 to 2026-08-30",
+  "updated": "2026-09-06",
+  "window": "2026-09-06 to 2026-09-20",
   "venues": [],
   "marquee": [
     {
-      "name": "East Coast Surfing Championships",
-      "dates": "Aug 23–30",
-      "location": "Virginia Beach, VA"
+      "name": "Maryland Renaissance Festival",
+      "dates": "Sep 5–7 (this weekend) + ongoing",
+      "location": "Crownsville, MD"
     },
     {
-      "name": "Maryland State Fair (block 1)",
-      "dates": "Aug 27–30",
+      "name": "Maryland State Fair (current block)",
+      "dates": "Sep 3–7; next Sep 10–13",
       "location": "Lutherville-Timonium, MD"
     },
     {
-      "name": "Maryland Renaissance Festival opens",
-      "dates": "Aug 29–30",
-      "location": "Crownsville, MD"
+      "name": "Annapolis Songwriters Festival",
+      "dates": "Sep 10–13",
+      "location": "Annapolis, MD"
+    },
+    {
+      "name": "Great Frederick Fair",
+      "dates": "Sep 18–26",
+      "location": "Frederick, MD"
     }
   ],
-  "_note": "SOC refresh 2026-08-23. Full venues restore deferred; intel ticker + field-sites carry primary Ops content."
+  "_note": "SOC refresh 2026-09-06. Full venues restore deferred; intel ticker + field-sites carry primary Ops content. Sports data balanced with active MLB series."
 }

@@ -1,52 +1,67 @@
 {
-  "updated": "2026-08-23",
-  "window": "2026-08-23 to 2026-08-30",
-  "note": "SOC refresh 2026-08-23. Ended fairs removed from primary focus; ECSC + MD State Fair + RenFest highlighted. Standing Field pins unchanged.",
+  "updated": "2026-09-06",
+  "window": "2026-09-06 to 2026-09-20",
+  "note": "SOC refresh 2026-09-06. Ended August events removed or marked. Highlighted active RenFest, State Fair blocks, standing Field pins retained. Entertainment balanced with timely festivals.",
   "sites": [
     {
-      "id": "mcagfair",
-      "name": "Montgomery County Agricultural Fair",
+      "id": "renfestmd",
+      "name": "Maryland Renaissance Festival",
       "category": "festival",
       "layer": "Entertainment",
       "sublayer": "Festivals",
-      "lat": 39.154,
-      "lon": -77.201,
-      "city": "Gaithersburg, MD",
-      "dates": "2026-08-14 to 2026-08-22",
-      "time_sensitive": false,
-      "official": "https://www.mcagfair.com/",
-      "note": "ENDED Aug 22. Final full days Fri-Sat Aug 21-22. Livestock, rides, music, fair food.",
-      "best_for": "Families"
-    },
-    {
-      "id": "statefairwv",
-      "name": "State Fair of West Virginia",
-      "category": "festival",
-      "layer": "Entertainment",
-      "sublayer": "Festivals",
-      "lat": 37.801,
-      "lon": -80.445,
-      "city": "Lewisburg, WV",
-      "dates": "2026-08-13 to 2026-08-22",
-      "time_sensitive": false,
-      "official": "https://statefairofwv.com",
-      "note": "ENDED Aug 22. Final days. Stone Temple Pilots Sat Aug 22 grandstand. DockDogs + free stages daytime.",
+      "lat": 39.026,
+      "lon": -76.601,
+      "city": "Crownsville, MD",
+      "dates": "2026-08-29 to 2026-10-25 (weekends)",
+      "time_sensitive": true,
+      "official": "https://www.rennfest.com/",
+      "note": "ACTIVE this weekend Sep 5–7 and ongoing weekends. 50th season. Jousting, artisans, turkey legs.",
       "best_for": "Families, couples, squad"
     },
     {
-      "id": "ecsc",
-      "name": "East Coast Surfing Championships",
-      "category": "outdoor",
-      "layer": "Field",
-      "sublayer": "Lakes",
-      "lat": 36.852,
-      "lon": -75.978,
-      "city": "Virginia Beach, VA",
-      "dates": "2026-08-23 to 2026-08-30",
+      "id": "mdstatefair",
+      "name": "Maryland State Fair",
+      "category": "festival",
+      "layer": "Entertainment",
+      "sublayer": "Festivals",
+      "lat": 39.425,
+      "lon": -76.615,
+      "city": "Lutherville-Timonium, MD",
+      "dates": "2026-08-27 to 2026-09-13 (blocks)",
       "time_sensitive": true,
-      "official": "https://www.surfecsc.com/",
-      "note": "64th annual. Ongoing through Aug 30. Free beach viewing Virginia Beach Oceanfront.",
-      "best_for": "Families, adventure"
+      "official": "https://www.marylandstatefair.com/",
+      "note": "Current block Sep 3–7; next Sep 10–13. Rides, livestock, classic fair energy.",
+      "best_for": "Families"
+    },
+    {
+      "id": "frederickfair",
+      "name": "Great Frederick Fair",
+      "category": "festival",
+      "layer": "Entertainment",
+      "sublayer": "Festivals",
+      "lat": 39.414,
+      "lon": -77.410,
+      "city": "Frederick, MD",
+      "dates": "2026-09-18 to 2026-09-26",
+      "time_sensitive": true,
+      "official": "https://www.thegreatfrederickfair.com/",
+      "note": "Upcoming major agricultural fair. Mark your calendars.",
+      "best_for": "Families"
+    },
+    {
+      "id": "annapolissong",
+      "name": "Annapolis Songwriters Festival",
+      "category": "music",
+      "layer": "Entertainment",
+      "sublayer": "Concerts",
+      "lat": 38.978,
+      "lon": -76.492,
+      "city": "Annapolis, MD",
+      "dates": "2026-09-10 to 2026-09-13",
+      "time_sensitive": true,
+      "official": "https://www.annapolissongwritersfestival.com/",
+      "note": "Outdoor stages and songwriter showcases in historic Annapolis.",
+      "best_for": "Couples, music lovers"
     },
     {
       "id": "assateague",
@@ -60,7 +75,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/asis/",
-      "note": "Ocean-side camping + wild horses. Book ahead in season.",
+      "note": "Ocean-side camping + wild horses. Excellent early-fall window.",
       "best_for": "Adventure, families"
     },
     {
@@ -75,7 +90,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://dnr.maryland.gov/publiclands/",
-      "note": "Camping, paddling, lake access. Western MD base.",
+      "note": "Camping, paddling, lake access. Western MD base. Great this week.",
       "best_for": "Families, adventure"
     },
     {
@@ -90,7 +105,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/neri/",
-      "note": "Signature hikes, overlooks, bridge views.",
+      "note": "Signature hikes, overlooks, bridge views. Clear-sky ideal.",
       "best_for": "Adventure, couples"
     },
     {
@@ -105,7 +120,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/shen/",
-      "note": "Overlooks + short trails. Best clear-sky drives this week.",
+      "note": "Overlooks + short trails. Prime early-fall drive conditions this week.",
       "best_for": "Couples, families, reset"
     },
     {
@@ -120,8 +135,23 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/choh/",
-      "note": "Flat towpath walk/bike.",
+      "note": "Flat towpath walk/bike. Excellent recovery weather.",
       "best_for": "Families, couples"
+    },
+    {
+      "id": "ecsc",
+      "name": "East Coast Surfing Championships",
+      "category": "outdoor",
+      "layer": "Field",
+      "sublayer": "Lakes",
+      "lat": 36.852,
+      "lon": -75.978,
+      "city": "Virginia Beach, VA",
+      "dates": "2026-08-23 to 2026-08-30",
+      "time_sensitive": false,
+      "official": "https://www.surfecsc.com/",
+      "note": "ENDED Aug 30. Left for reference; beach culture continues.",
+      "best_for": "Families, adventure"
     }
   ],
   "layer_groups": {
