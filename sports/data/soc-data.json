@@ -1,28 +1,38 @@
 {
-  "updated": "2026-09-06",
-  "window": "2026-09-06 to 2026-09-20",
+  "updated": "2026-09-13",
+  "window": "2026-09-13 to 2026-09-27",
   "venues": [],
   "marquee": [
     {
-      "name": "Maryland Renaissance Festival",
-      "dates": "Sep 5–7 (this weekend) + ongoing",
+      "name": "Maryland Renaissance Festival (Myth & Magic)",
+      "dates": "Sep 12–13 this weekend + ongoing through Oct",
       "location": "Crownsville, MD"
     },
     {
-      "name": "Maryland State Fair (current block)",
-      "dates": "Sep 3–7; next Sep 10–13",
+      "name": "Maryland State Fair (final day)",
+      "dates": "Ends today Sep 13",
       "location": "Lutherville-Timonium, MD"
     },
     {
+      "name": "Maryland Seafood Festival",
+      "dates": "Final day Sep 13",
+      "location": "Sandy Point State Park, Annapolis, MD"
+    },
+    {
       "name": "Annapolis Songwriters Festival",
-      "dates": "Sep 10–13",
+      "dates": "Final day Sep 13",
       "location": "Annapolis, MD"
     },
     {
       "name": "Great Frederick Fair",
       "dates": "Sep 18–26",
       "location": "Frederick, MD"
+    },
+    {
+      "name": "NFL Week 1",
+      "dates": "Sep 13",
+      "location": "Ravens @ Colts · Commanders @ Eagles"
     }
   ],
-  "_note": "SOC refresh 2026-09-06. Full venues restore deferred; intel ticker + field-sites carry primary Ops content. Sports data balanced with active MLB series."
+  "_note": "SOC refresh 2026-09-13. Full venues restore deferred; intel ticker + field-sites carry primary Ops content. Sports balanced with NFL opener + active MLB (Nats home)."
 }
