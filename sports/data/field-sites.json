@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-06",
-  "window": "2026-09-06 to 2026-09-20",
-  "note": "SOC refresh 2026-09-06. Ended August events removed or marked. Highlighted active RenFest, State Fair blocks, standing Field pins retained. Entertainment balanced with timely festivals.",
+  "updated": "2026-09-13",
+  "window": "2026-09-13 to 2026-09-27",
+  "note": "SOC refresh 2026-09-13. Ended State Fair and Songwriters marked final day. ECSC already ended. Highlighted RenFest Myth & Magic this weekend + Seafood Fest today + Frederick Fair next week. Standing Field pins retained with mid-September outdoor window notes. Sports/Field/Entertainment balanced.",
   "sites": [
     {
       "id": "renfestmd",
@@ -15,7 +15,7 @@
       "dates": "2026-08-29 to 2026-10-25 (weekends)",
       "time_sensitive": true,
       "official": "https://www.rennfest.com/",
-      "note": "ACTIVE this weekend Sep 5–7 and ongoing weekends. 50th season. Jousting, artisans, turkey legs.",
+      "note": "ACTIVE this weekend Sep 12–13 (Myth & Magic) and ongoing weekends through Oct 25. 50th season. Jousting, artisans, turkey legs.",
       "best_for": "Families, couples, squad"
     },
     {
@@ -30,8 +30,23 @@
       "dates": "2026-08-27 to 2026-09-13 (blocks)",
       "time_sensitive": true,
       "official": "https://www.marylandstatefair.com/",
-      "note": "Current block Sep 3–7; next Sep 10–13. Rides, livestock, classic fair energy.",
+      "note": "FINAL DAY today Sep 13. Last block ends. Rides, livestock, classic fair energy.",
       "best_for": "Families"
+    },
+    {
+      "id": "mdseafoodfest",
+      "name": "Maryland Seafood Festival",
+      "category": "festival",
+      "layer": "Entertainment",
+      "sublayer": "Festivals",
+      "lat": 39.016,
+      "lon": -76.398,
+      "city": "Sandy Point State Park, Annapolis, MD",
+      "dates": "2026-09-11 to 2026-09-13",
+      "time_sensitive": true,
+      "official": "https://mdseafoodfestival.com/",
+      "note": "FINAL DAY today Sep 13. 60th year. Crab, live music, Mama Duck, Skipjack Heritage Days.",
+      "best_for": "Families, food lovers"
     },
     {
       "id": "frederickfair",
@@ -45,7 +60,7 @@
       "dates": "2026-09-18 to 2026-09-26",
       "time_sensitive": true,
       "official": "https://www.thegreatfrederickfair.com/",
-      "note": "Upcoming major agricultural fair. Mark your calendars.",
+      "note": "NEXT WEEK. Opens Sep 18 with Daughtry. Major agricultural fair + grandstand concerts.",
       "best_for": "Families"
     },
     {
@@ -60,7 +75,7 @@
       "dates": "2026-09-10 to 2026-09-13",
       "time_sensitive": true,
       "official": "https://www.annapolissongwritersfestival.com/",
-      "note": "Outdoor stages and songwriter showcases in historic Annapolis.",
+      "note": "FINAL DAY today Sep 13. Outdoor stages and songwriter showcases. Young the Giant headlined.",
       "best_for": "Couples, music lovers"
     },
     {
@@ -75,7 +90,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/asis/",
-      "note": "Ocean-side camping + wild horses. Excellent early-fall window.",
+      "note": "Ocean-side camping + wild horses. Excellent mid-September window after today.",
       "best_for": "Adventure, families"
     },
     {
@@ -90,7 +105,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://dnr.maryland.gov/publiclands/",
-      "note": "Camping, paddling, lake access. Western MD base. Great this week.",
+      "note": "Camping, paddling, lake access. Western MD base. Strong mid-Sep conditions.",
       "best_for": "Families, adventure"
     },
     {
@@ -105,7 +120,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/neri/",
-      "note": "Signature hikes, overlooks, bridge views. Clear-sky ideal.",
+      "note": "Signature hikes, overlooks, bridge views. Clear-sky ideal midweek onward.",
       "best_for": "Adventure, couples"
     },
     {
@@ -120,7 +135,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/shen/",
-      "note": "Overlooks + short trails. Prime early-fall drive conditions this week.",
+      "note": "Overlooks + short trails. Prime mid-September drive conditions after today.",
       "best_for": "Couples, families, reset"
     },
     {
@@ -135,7 +150,7 @@
       "dates": "standing",
       "time_sensitive": false,
       "official": "https://www.nps.gov/choh/",
-      "note": "Flat towpath walk/bike. Excellent recovery weather.",
+      "note": "Flat towpath walk/bike. Excellent after showers clear.",
       "best_for": "Families, couples"
     },
     {
@@ -150,7 +165,7 @@
       "dates": "2026-08-23 to 2026-08-30",
       "time_sensitive": false,
       "official": "https://www.surfecsc.com/",
-      "note": "ENDED Aug 30. Left for reference; beach culture continues.",
+      "note": "ENDED Aug 30. Left for reference; beach culture continues into September.",
       "best_for": "Families, adventure"
     }
   ],
