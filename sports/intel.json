@@ -1,73 +1,73 @@
 {
-  "updated": "2026-09-06T02:10:00-04:00",
-  "headline": "Labor Day recovery · excellent outdoor window · RenFest + State Fair active · Orioles home series",
+  "updated": "2026-09-13T02:00:00-04:00",
+  "headline": "NFL Week 1 kickoff · RenFest Myth & Magic this weekend · State Fair + Songwriters final day · Pleasant outdoor window ahead",
   "big_money": [
     {
+      "tag": "NFL",
+      "title": "Ravens open season at Colts · Commanders at Eagles",
+      "note": "Sun Sep 13 · BAL @ IND 1pm CBS · WAS @ PHI 4:25pm FOX · Week 1 football",
+      "url": "https://www.nfl.com/",
+      "ends": "2026-09-13"
+    },
+    {
       "tag": "Ren Faire",
-      "title": "Maryland Renaissance Festival (this weekend)",
-      "note": "Sep 5–7 · Crownsville · 50th season · turkey legs, jousting, full shire energy",
+      "title": "Maryland Renaissance Festival — Myth & Magic Weekend",
+      "note": "Sep 12–13 · Crownsville · 50th season · special magic performances + ongoing weekends through Oct",
       "url": "https://www.rennfest.com/",
-      "ends": "2026-09-07"
+      "ends": "2026-10-25"
     },
     {
       "tag": "Fair",
-      "title": "Maryland State Fair (current block)",
-      "note": "Sep 3–7 · Lutherville-Timonium · rides, livestock, classic fair · next block Sep 10–13",
+      "title": "Maryland State Fair final day",
+      "note": "Last block ends today Sep 13 · Timonium · rides, livestock, classic fair energy",
       "url": "https://www.marylandstatefair.com/",
-      "ends": "2026-09-07"
-    },
-    {
-      "tag": "MLB",
-      "title": "Orioles home vs Red Sox then Guardians",
-      "note": "Sun Sep 6 vs BOS · then CLE Mon–Wed · Camden Yards outdoor baseball",
-      "url": "https://www.mlb.com/orioles",
-      "ends": "2026-09-09"
-    },
-    {
-      "tag": "MLB",
-      "title": "Nationals return home vs Angels",
-      "note": "Road trip ends · home series vs LAA starts Fri Sep 11 · Nationals Park",
-      "url": "https://www.mlb.com/nationals",
       "ends": "2026-09-13"
+    },
+    {
+      "tag": "MLB",
+      "title": "Nationals home vs Angels then Phillies",
+      "note": "Sun Sep 13 vs LAA 1:35 · then PHI Tue–Wed · Nationals Park outdoor baseball",
+      "url": "https://www.mlb.com/nationals",
+      "ends": "2026-09-16"
     }
   ],
   "sleepers": [
     {
-      "tag": "Nature",
-      "title": "Prime early-fall outdoor window",
-      "note": "Mostly sunny, lows 60s, highs mid-70s to low-80s · ideal for Skyline Drive, Assateague, C&O, Deep Creek",
-      "url": "/weekends/2026-08-21/maryland.html",
-      "ends": "2026-09-10"
-    },
-    {
       "tag": "Music",
-      "title": "Annapolis Songwriters Festival",
-      "note": "Sep 10–13 · Annapolis · outdoor stages + songwriter showcases",
+      "title": "Annapolis Songwriters Festival final day",
+      "note": "Ends today Sep 13 · outdoor stages + showcases · Young the Giant headlined",
       "url": "https://www.annapolissongwritersfestival.com/",
       "ends": "2026-09-13"
     },
     {
+      "tag": "Seafood",
+      "title": "Maryland Seafood Festival at Sandy Point",
+      "note": "Sep 12–13 · 60th year · crab, live music, Mama Duck, Skipjack Heritage",
+      "url": "https://mdseafoodfestival.com/",
+      "ends": "2026-09-13"
+    },
+    {
       "tag": "Fair",
-      "title": "Great Frederick Fair approaching",
-      "note": "Sep 18–26 · Frederick · major mid-Atlantic agricultural fair",
+      "title": "Great Frederick Fair next week",
+      "note": "Sep 18–26 · Frederick · Daughtry opens · major agricultural fair + grandstand",
       "url": "https://www.thegreatfrederickfair.com/",
       "ends": "2026-09-26"
     },
     {
-      "tag": "Water",
-      "title": "Late-season beach + paddle window",
-      "note": "Ocean City / Virginia Beach still swimming-friendly · cooler nights arriving",
-      "url": "https://www.visitvirginiabeach.com/",
-      "ends": "2026-09-14"
+      "tag": "Nature",
+      "title": "Prime mid-September outdoor window",
+      "note": "After today showers: sunny midweek · highs 75–85 · ideal Skyline Drive, Assateague, C&O, trails",
+      "url": "/weekends/2026-08-21/maryland.html",
+      "ends": "2026-09-20"
     }
   ],
   "weather_window": {
-    "summary": "Excellent early-September outdoor window. Mostly sunny through midweek, highs 75–85°F, comfortable humidity. Ideal for trails, fairs, and ballparks. Slight shower chances increase late week.",
-    "sun": "2026-09-06",
-    "mon": "Sunny · 73–78",
-    "tue": "Mostly sunny · 78–81",
-    "wed": "Mostly sunny · 80–85",
-    "thu": "Partly cloudy · chance storms · 84–86",
-    "fri_sat": "Partly cloudy / isolated storms · mid-80s"
+    "summary": "Today (Sun 13): showers/t-storms possible, high ~85. Then excellent stretch — Mon–Wed sunny to mostly sunny, highs 75–83, comfortable. Ideal for trails, parks, and ballparks. Slightly warmer mid-to-late week.",
+    "sun": "2026-09-13",
+    "mon": "Partly sunny / clearing · 59–78",
+    "tue": "Sunny · 57–78",
+    "wed": "Sunny · 60–83",
+    "thu": "Sunny · 63–86",
+    "fri_sat": "Mostly sunny / partly cloudy · mid-80s"
   }
 }
