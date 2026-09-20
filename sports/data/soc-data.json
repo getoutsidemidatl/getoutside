@@ -1,38 +1,38 @@
 {
-  "updated": "2026-09-13",
-  "window": "2026-09-13 to 2026-09-27",
+  "updated": "2026-09-20",
+  "window": "2026-09-20 to 2026-10-04",
   "venues": [],
   "marquee": [
     {
-      "name": "Maryland Renaissance Festival (Myth & Magic)",
-      "dates": "Sep 12–13 this weekend + ongoing through Oct",
+      "name": "Maryland Renaissance Festival (Pirate Adventure)",
+      "dates": "Sep 19–20 this weekend + ongoing through Oct",
       "location": "Crownsville, MD"
     },
     {
-      "name": "Maryland State Fair (final day)",
-      "dates": "Ends today Sep 13",
-      "location": "Lutherville-Timonium, MD"
-    },
-    {
-      "name": "Maryland Seafood Festival",
-      "dates": "Final day Sep 13",
-      "location": "Sandy Point State Park, Annapolis, MD"
-    },
-    {
-      "name": "Annapolis Songwriters Festival",
-      "dates": "Final day Sep 13",
-      "location": "Annapolis, MD"
-    },
-    {
       "name": "Great Frederick Fair",
-      "dates": "Sep 18–26",
+      "dates": "Sep 18–26 in progress",
       "location": "Frederick, MD"
     },
     {
-      "name": "NFL Week 1",
-      "dates": "Sep 13",
-      "location": "Ravens @ Colts · Commanders @ Eagles"
+      "name": "Anne Arundel County Fair",
+      "dates": "Final day Sep 20",
+      "location": "Crownsville, MD"
+    },
+    {
+      "name": "NFL Week 2",
+      "dates": "Sep 20",
+      "location": "Ravens vs Saints · Commanders @ Cowboys"
+    },
+    {
+      "name": "All Things Go Festival",
+      "dates": "Sep 25–27",
+      "location": "Columbia, MD"
+    },
+    {
+      "name": "Oceans Calling Festival",
+      "dates": "Sep 25–27",
+      "location": "Ocean City, MD"
     }
   ],
-  "_note": "SOC refresh 2026-09-13. Full venues restore deferred; intel ticker + field-sites carry primary Ops content. Sports balanced with NFL opener + active MLB (Nats home)."
+  "_note": "SOC refresh 2026-09-20. Full venues restore deferred; intel ticker + field-sites carry primary Ops content. Sports balanced with NFL Week 2 + active MLB (O's home / Nats road)."
 }
