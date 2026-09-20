@@ -1,73 +1,73 @@
 {
-  "updated": "2026-09-13T02:00:00-04:00",
-  "headline": "NFL Week 1 kickoff · RenFest Myth & Magic this weekend · State Fair + Songwriters final day · Pleasant outdoor window ahead",
+  "updated": "2026-09-20T02:00:00-04:00",
+  "headline": "NFL Week 2 · Ravens host Saints · RenFest Pirate Weekend · Frederick Fair in full swing · Cooler unsettled midweek",
   "big_money": [
     {
       "tag": "NFL",
-      "title": "Ravens open season at Colts · Commanders at Eagles",
-      "note": "Sun Sep 13 · BAL @ IND 1pm CBS · WAS @ PHI 4:25pm FOX · Week 1 football",
+      "title": "Ravens vs Saints · Commanders at Cowboys",
+      "note": "Sun Sep 20 · BAL vs NO 1pm CBS at M&T · WAS @ DAL 4:25pm FOX · Week 2",
       "url": "https://www.nfl.com/",
-      "ends": "2026-09-13"
+      "ends": "2026-09-20"
     },
     {
       "tag": "Ren Faire",
-      "title": "Maryland Renaissance Festival — Myth & Magic Weekend",
-      "note": "Sep 12–13 · Crownsville · 50th season · special magic performances + ongoing weekends through Oct",
+      "title": "Maryland Renaissance Festival — Pirate Adventure Weekend",
+      "note": "Sep 19–20 · Crownsville · 50th season · pirate music & mayhem + ongoing weekends through Oct 25",
       "url": "https://www.rennfest.com/",
       "ends": "2026-10-25"
     },
     {
       "tag": "Fair",
-      "title": "Maryland State Fair final day",
-      "note": "Last block ends today Sep 13 · Timonium · rides, livestock, classic fair energy",
-      "url": "https://www.marylandstatefair.com/",
-      "ends": "2026-09-13"
+      "title": "Great Frederick Fair in progress",
+      "note": "Sep 18–26 · Frederick · Neal McCoy today · rides, livestock, grandstand through Sat",
+      "url": "https://www.thegreatfrederickfair.com/",
+      "ends": "2026-09-26"
     },
     {
       "tag": "MLB",
-      "title": "Nationals home vs Angels then Phillies",
-      "note": "Sun Sep 13 vs LAA 1:35 · then PHI Tue–Wed · Nationals Park outdoor baseball",
-      "url": "https://www.mlb.com/nationals",
-      "ends": "2026-09-16"
+      "title": "Orioles home vs Brewers · Nats on road",
+      "note": "O's finish series vs MIL today · Nats @ STL then DET · Mets home series Fri–Sun",
+      "url": "https://www.mlb.com/",
+      "ends": "2026-09-27"
     }
   ],
   "sleepers": [
     {
       "tag": "Music",
-      "title": "Annapolis Songwriters Festival final day",
-      "note": "Ends today Sep 13 · outdoor stages + showcases · Young the Giant headlined",
-      "url": "https://www.annapolissongwritersfestival.com/",
-      "ends": "2026-09-13"
+      "title": "All Things Go + Oceans Calling next weekend",
+      "note": "Sep 25–27 · Columbia MD (All Things Go) · Ocean City (Oceans Calling) · major outdoor music",
+      "url": "https://www.allthingsgofestival.com/",
+      "ends": "2026-09-27"
     },
     {
-      "tag": "Seafood",
-      "title": "Maryland Seafood Festival at Sandy Point",
-      "note": "Sep 12–13 · 60th year · crab, live music, Mama Duck, Skipjack Heritage",
-      "url": "https://mdseafoodfestival.com/",
-      "ends": "2026-09-13"
-    },
-    {
-      "tag": "Fair",
-      "title": "Great Frederick Fair next week",
-      "note": "Sep 18–26 · Frederick · Daughtry opens · major agricultural fair + grandstand",
-      "url": "https://www.thegreatfrederickfair.com/",
-      "ends": "2026-09-26"
+      "tag": "Fest",
+      "title": "Anne Arundel County Fair final day",
+      "note": "Ends today Sep 20 · Crownsville · classic county fair energy near RenFest",
+      "url": "https://www.aacountyfair.org/",
+      "ends": "2026-09-20"
     },
     {
       "tag": "Nature",
-      "title": "Prime mid-September outdoor window",
-      "note": "After today showers: sunny midweek · highs 75–85 · ideal Skyline Drive, Assateague, C&O, trails",
+      "title": "Prime early-fall outdoor window midweek gaps",
+      "note": "Today mild with shower risk · cooler showery midweek · better weekend outlook for trails, Skyline, Assateague",
       "url": "/weekends/2026-08-21/maryland.html",
-      "ends": "2026-09-20"
+      "ends": "2026-09-27"
+    },
+    {
+      "tag": "Fair",
+      "title": "RenFest continues every weekend",
+      "note": "Next: Celtic Celebration Sep 26–27 · then Harvest Hollow October weekends",
+      "url": "https://www.rennfest.com/",
+      "ends": "2026-10-25"
     }
   ],
   "weather_window": {
-    "summary": "Today (Sun 13): showers/t-storms possible, high ~85. Then excellent stretch — Mon–Wed sunny to mostly sunny, highs 75–83, comfortable. Ideal for trails, parks, and ballparks. Slightly warmer mid-to-late week.",
-    "sun": "2026-09-13",
-    "mon": "Partly sunny / clearing · 59–78",
-    "tue": "Sunny · 57–78",
-    "wed": "Sunny · 60–83",
-    "thu": "Sunny · 63–86",
-    "fri_sat": "Mostly sunny / partly cloudy · mid-80s"
+    "summary": "Today (Sun 20): mostly cloudy / chance showers or t-storms, high ~83–85. Front moves through overnight. Mon–Wed cooler with daily shower chances, highs 65–75. Drier trend late week into next weekend. Ideal gaps for trails and parks between systems.",
+    "sun": "2026-09-20",
+    "mon": "Mostly cloudy / showers · 62–75",
+    "tue": "Showers likely · 57–70",
+    "wed": "Chance showers · 55–68",
+    "thu": "Mostly cloudy · 55–65",
+    "fri_sat": "Improving · mid-to-upper 60s"
   }
 }
